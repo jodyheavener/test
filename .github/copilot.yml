@@ -1,0 +1,30 @@
+---
+intro: 'Inde igitur, inquit, ordiendum est. Neutrum vero, inquit ille. Bonum valitudo miser morbus. Utram tandem linguam nescio'
+references:
+  message-1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. **Iam id ipsum absurdum**, maximum malum neglegi. Nos commodius agimus.'
+  message-2: 'Sedulo, inquam, faciam. Satis est ad hoc responsum. At ille pellit, qui permulcet sensum voluptate.'
+  path-files: '[Path Files Example](https://www.com)'
+  new-path-files: 'Check out [New Path Files Example](https://www.com)'
+  old-path-files: '[Old Path Files Example](https://www.com) ✨'
+  new-files: '[New Files Example](https://www.com)'
+  regexp-files: '[Regexp Example](https://www.com) would be wise'
+  string-contains: '[String Contains Example](https://www.com) 🎉'
+rules:
+- pathMatches: "*.html"
+  reference: path-files
+- newPathMatches: "*.html"
+  reference: new-path-files
+- newPathMatches: "*.js"
+  reference: message-1
+- oldPathMatches: "*.html"
+  reference: old-path-files
+- newFile: true
+  reference:
+  - new-files
+  - message-2
+- regexp: style=".*"
+  reference: regexp-files
+- stringContains:
+  - ssjjkk
+  - user?id=wrentopher
+  reference: string-contains
