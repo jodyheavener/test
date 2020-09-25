@@ -1,0 +1,33 @@
+---
+references:
+  path-files:
+    title: Path Files Example
+    url: https://www.com
+  new-path-files:
+    title: New Path Files Example
+    url: https://www.com
+  old-path-files:
+    title: Old Path Files Example
+    url: https://www.com
+  new-files:
+    title: New Files Example
+    url: https://www.com
+  regexp-files:
+    title: Regexp Example
+    url: https://www.com
+  string-contains:
+    title: String Contains Example
+    url: https://www.com
+rules:
+- pathMatches: "*.html"
+  reference: path-files
+- newPathMatches: "*.html"
+  reference: new-path-files
+- oldPathMatches: "*.html"
+  reference: old-path-files
+- newFile: true
+  reference: new-files
+- regexp: style=".*"
+  reference: regexp-files
+- stringContains: ssjjkk
+  reference: string-contains
